@@ -44,7 +44,7 @@
 <section class="hero hero-section">
     <div class="container">
 <h1 class="hero-header">Эффективные решения для вашего бизнеса</h1>
-<button type="button" class="hero-button">Заказать услугу</button>
+<button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
 </div>
 </section>
 <!-- преимущества компании спрятать-->
@@ -91,9 +91,12 @@
     <div class="container">
     <h2 class="main-title">Чем мы занимаемся</h2>
     <ul class="list products-list">
-        <li class="products-item"><img src="./images/what_are_we_doing/box1.jpg" alt="чем мы занимаемся один" width="370"/></li>
-        <li class="products-item"><img src="./images/what_are_we_doing/box2.jpg" alt="чем мы занимаемся два" width="370"/></li>
-        <li class="products-item"><img src="./images/what_are_we_doing/box3.jpg" alt="чем мы занимаемся три" width="370"/></li>
+        <li class="products-item"><div class="products-card-wrapper"><img src="./images/what_are_we_doing/box1.jpg" alt="чем мы занимаемся один" width="370"/>
+        <p class="products-overlay">Десктопные приложения</p></div></li>
+        <li class="products-item"><div class="products-card-wrapper"><img src="./images/what_are_we_doing/box2.jpg" alt="чем мы занимаемся два" width="370"/>
+            <p class="products-overlay">Мобильные приложения</p></div></li>
+        <li class="products-item"><div class="products-card-wrapper"><img src="./images/what_are_we_doing/box3.jpg" alt="чем мы занимаемся три" width="370"/>
+            <p class="products-overlay">Дизайнерские решения</p></div></li>
     </ul></div>
 </section>
 <!--Команда-->
@@ -104,7 +107,7 @@
         <li class="team-member-item"><img src="./images/our_team/photo1.jpg" class="member-photo" alt="Дизайнер" width="270"/>
         <div class="member-title-description">
         <h3 class="title team-member-title">Игорь Демьяненко</h3>
-        <p lang="en" class="description">Product Designer</p> </div>
+        <p lang="en" class="description">Product Designer</p> 
         <ul class="list social-nets">
                 <li class="item-social-nets">
  <a href="" class="icon-social-nets">
@@ -130,12 +133,12 @@
                         <use href="./images/icons/sprite.svg#icon-linkedin">
                         </use></svg></a>
                 </li>
-            </ul>
+            </ul></div>
             </li>
         <li class="team-member-item"><img src="./images/our_team/photo2.jpg" class="member-photo" alt="Разработчик" width="270"/>
         <div class="member-title-description">
         <h3 class="title team-member-title">Ольга Репина</h3>
-        <p lang="en" class="description">Frontend Developer</p> </div>
+        <p lang="en" class="description">Frontend Developer</p> 
         <ul class="list social-nets">
             <li class="item-social-nets">
 <a href="" class="icon-social-nets">
@@ -161,12 +164,12 @@
                     <use href="./images/icons/sprite.svg#icon-linkedin">
                     </use></svg></a>
             </li>
-        </ul>
+        </ul></div>
         </li>
         <li class="team-member-item"><img src="./images/our_team/photo3.jpg" class="member-photo" alt="Маркетинг" width="270"/>
         <div class="member-title-description">
         <h3 class="title team-member-title">Николай Тарасов</h3>
-        <p lang="en" class="description">Marketing</p></div>
+        <p lang="en" class="description">Marketing</p>
         <ul class="list social-nets">
             <li class="item-social-nets">
 <a href="" class="icon-social-nets">
@@ -192,12 +195,12 @@
                     <use href="./images/icons/sprite.svg#icon-linkedin">
                     </use></svg></a>
             </li>
-        </ul>   
+        </ul>   </div>
         </li>
         <li class="team-member-item"><img src="./images/our_team/photo4.jpg" class="member-photo" alt="ЮАйДизайнер" width="270"/>
         <div class="member-title-description">
         <h3 class="title team-member-title">Михаил Ермаков</h3>
-        <p lang="en" class="description">UI Designer</p></div>
+        <p lang="en" class="description">UI Designer</p>
         
         <ul class="list social-nets">
             <li class="item-social-nets">
@@ -224,7 +227,7 @@
                     <use href="./images/icons/sprite.svg#icon-linkedin">
                     </use></svg></a>
             </li>
-        </ul>
+        </ul></div>
         </li>
     </ul>
     </div>
@@ -323,7 +326,15 @@
                             <svg class="icon-in-tw-f-in">
                             <use href="./images/icons/sprite.svg#icon-linkedin">
                             </use></svg></a> </li></ul></div></div>
-                           
 </footer>
+<!-- Модальное окно -->
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+    <button type="button" class="modal-close-button" data-modal-close>
+        <svg class="modal-close-icon data-modal-close">
+        <use href="./images/icons/sprite.svg#icon-close1"></use>
+    </svg></button></div>
+</div>          
+<script src="./js/modal.js"></script>
 </body>
 </html>
