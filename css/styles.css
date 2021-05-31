@@ -318,6 +318,8 @@ font-size: 14px;
 line-height: 1.7;
 letter-spacing: 0.03em;
 text-transform: none;}
+
+
 .icon-benefits{
    display:flex;
    justify-content: center;
@@ -327,8 +329,8 @@ text-transform: none;}
    height:120px;
    background-color:var(--team-bg-color);
    border-radius: 4px;
-   
-}
+   }
+
 .icon-benefits-item{
     width:70px;
     height:70px;
@@ -336,11 +338,9 @@ text-transform: none;}
 
 /* типы создаваемых продуктов */
 
-
 .products-list{
     display:flex;
     justify-content: space-between;
-    
     margin-bottom:0;
    }
 .products-list:not(:last-child){
@@ -409,7 +409,6 @@ background-color: var(--site-nav-bg-color);
 
 .team-member-title{
     margin-bottom:10px;
-
 }
 .member-photo{
     background-color: var(--hero-footer-bg-color);
@@ -623,6 +622,7 @@ overflow:hidden;
 }
 /* Футер адрес контакты */
 .footer-container{
+    
     padding-top:60px;
     padding-bottom:60px;
     padding-left:0;
@@ -630,9 +630,11 @@ overflow:hidden;
     padding-left:15px;
     display:inline-flex;
     align-items: baseline;
+  
 }
 .footer .list{
     margin-bottom:0;
+   
 }
 .footer-item:not(:last-child){
     margin-bottom:9px;
@@ -640,6 +642,8 @@ overflow:hidden;
 .footer {
     background-color: var(--hero-footer-bg-color);
     color:var(--hero-text-color);
+    display:flex;
+    justify-content:center;
 }
 .footer .contacts{
 font-family: var(--main-font);
@@ -648,6 +652,7 @@ font-weight: 400;
 font-size: 14px;
 line-height: 1.7;
 letter-spacing: 0.03em;
+
 }
 .footer-container .logo{
     margin-bottom:20px;
@@ -722,7 +727,12 @@ align-items:center;
     height:100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index:100;
-
+    opacity:1;
+    visibility: visible;
+    pointer-events: auto;
+    transition-property:opacity, visibility;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--time-function);
 }
 .modal{
     position:absolute;
@@ -732,11 +742,13 @@ align-items:center;
     width:528px;
     height: 580px;
     background-color: var(--site-nav-bg-color);
+     
 }
 .is-hidden{
     opacity:0;
     visibility: hidden;
     pointer-events: none;
+    
 }
 .modal-close-icon{
 width:100%;
@@ -756,4 +768,5 @@ padding: 0;
 cursor: pointer;
 border-radius: 50%;
 border: 1px solid rgba(0, 0, 0, 0.1);
+cursor: pointer;
 }
